@@ -15,7 +15,11 @@ case class Queue[T](in:List[T] = Nil, out:List[T] = Nil) {
 	}
 
 	/** Accès au premier élément. */
-	def head():T = dequeue._1
+	def head():T = in match {
+		case Nil if(out.isEmpty) => throw new Exception("La queue est vide.")
+		case Nil => out.reverse.head
+		case _ => in.head		
+	}
 
 	/** Vrai si la liste est vide. */
 	def isEmpty:Boolean = in.isEmpty && out.isEmpty
