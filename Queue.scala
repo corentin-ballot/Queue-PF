@@ -25,8 +25,7 @@ case class Queue[T](in:List[T] = Nil, out:List[T] = Nil) {
 	
 	/** Retourne le dernier element de la queue sans la modifier. */
 	def rear():T = in match {
-		// in.head est null dans ce cas, il faut le remplacer par NULL
-		case Nil if(out.isEmpty) => in.head
+		case Nil if(out.isEmpty) => throw new Exception("La queue est vide.")
 		case Nil => out.reverse.head
 		case _ => in.head	
 	}
