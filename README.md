@@ -10,10 +10,10 @@ L’opération d’inversion ne se produit en retirant les éléments à la fin 
 
 - La méthode `enqueue(x:T)` ajoute un élément à la queue.
 - La méthode `dequeue()` retourne un tuple composé du premier élément ajouté à la queue, et de la queue privé de cet élément.
-- La méthode `head()` retourne le premier élément ajouté à la queue.
+- La méthode `head()` retourne le dernier élément ajouté à la queue.
 - La méthode `isEmpty` retourne `true` si la queue est vide, `false` sinon.
 - La méthode `length` retourne le nombre d'éléments présent dans la queue.
-- La méthode `rear()` retourne le dernier élément ajouté à la queue sans modifier cette dernière.
+- La méthode `rear()` retourne le premier élément ajouté à la queue sans modifier cette dernière.
 
 # Exemple d'utilisation
 
